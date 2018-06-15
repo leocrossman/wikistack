@@ -3,12 +3,15 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const main = require('./views/main.js');
 const models = require('./models/index.js');
+const wikiRouter = require('./routes/wiki');
+const userRouter = require('./routes/user');
 
 const app = express();
 
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/stylesheets'));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/wiki', wikiRouter);
 
 app.get('/', async (req, res) => {
   try {
