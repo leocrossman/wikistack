@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const main = require('./views/main.js');
+const models = require('./models/index.js');
 
 const app = express();
 
@@ -17,8 +18,15 @@ app.get('/', async (req, res) => {
   }
 });
 
-const PORT = 3000;
+const init = async () => {
+  // await models.User.sync();
+  // await models.Page.sync();
+  await models.db.sync({ force: true });
+  // await models.db.sync();
+  const PORT = 3000;
+  app.listen(PORT, () => {
+    console.log(`App listening in port ${PORT}`);
+  });
+};
 
-app.listen(PORT, () => {
-  console.log(`App listening in port ${PORT}`);
-});
+init();
