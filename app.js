@@ -12,9 +12,10 @@ app.use(express.static(__dirname + '/stylesheets'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/wiki', wikiRouter);
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
   try {
-    res.send(main(''));
+    // res.send(main(''));
+    res.redirect('/wiki');
   } catch (error) {
     res.status(500).send(`Something went wrong: ${error}`);
   }
