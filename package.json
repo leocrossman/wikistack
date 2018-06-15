@@ -1,0 +1,24 @@
+{
+  "name": "wikistack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon /Users/leocrossman/workshops/wikistack/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leocrossman/wikistack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leocrossman/wikistack/issues"
+  },
+  "homepage": "https://github.com/leocrossman/wikistack#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
