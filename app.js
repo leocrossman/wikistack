@@ -8,7 +8,7 @@ const wikiRouter = require('./routes/wiki');
 const userRouter = require('./routes/user');
 
 app.use(morgan('dev'));
-app.use(express.static(__dirname + '/stylesheets'));
+app.use(express.static(__dirname + '/stylesheets')); // GET /foo.js => ./stylesheets/foo.js // GET /sytle.css => ./stylesheets/sytle.css
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/wiki', wikiRouter);
 
