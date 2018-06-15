@@ -6,11 +6,6 @@ const main = require('./views/main.js');
 const models = require('./models/index.js');
 const wikiRouter = require('./routes/wiki');
 const userRouter = require('./routes/user');
-<<<<<<< HEAD
-
-const app = express();
-=======
->>>>>>> 273230cf244b3669beea46c8489e3fa58a784fe4
 
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/stylesheets')); // GET /foo.js => ./stylesheets/foo.js // GET /sytle.css => ./stylesheets/sytle.css
